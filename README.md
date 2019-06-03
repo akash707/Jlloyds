@@ -11,6 +11,5 @@
 8. After installing the dependencies, now run this command: <br/>
     <b>ng serve</b>
     
-<b>*Note - When you have successfully launch the frontend server then you will see a page with 2 Buttons - Register And Admin
-(Register button is to show the company registration form and Admin button is to show all the companies registered and you can also 
-deactivate company from admin
+<b>*Note - When you have successfully launched the frontend server then you will see a register form page with 2 Buttons - Register And Admin (Register button is to show the company registration form and Admin button is to show all the companies registered and you can also 
+deactivate company from admin page
