@@ -1,0 +1,46 @@
+<a (click) = "showRegister()">
+		<button type="button" style="margin-left:3%; margin-top:2%;" class="btn btn-success">
+				Register
+		</button>
+</a>
+<a (click) = "showAdmin()">
+	<button type="button" style="margin-left:1%; margin-top:2%;" class="btn btn-info">
+			Admin
+	</button>
+</a>
+<div *ngIf="showregister">
+<div class="title-div">
+  <h1>Company Registration Form</h1>
+</div>
+<div class="container-fluid" style="padding:3%">
+<form #registration ="ngForm" (ngSubmit) = "onClickSubmit(registration.value)">
+  <div class="form-group"> <!-- First Name -->
+      <label for="first_name" class="control-label">Company Name</label>
+      <input type="text" class="form-control" id="first_name" name="company_name" ngModel placeholder="Company Name">
+  </div>
+
+	<div class="form-group"> <!-- First Name -->
+		<label for="first_name" class="control-label">First Name</label>
+		<input type="text" class="form-control" id="first_name" name="first_name" ngModel placeholder="First Name">
+	</div>
+
+	<div class="form-group"> <!-- Last Name -->
+		<label for="last_name" class="control-label">Last Name</label>
+		<input type="text" class="form-control" id="last_name" name="last_name" ngModel placeholder="Last Name">
+	</div>
+
+	<div class="form-group"> <!-- Email -->
+		<label for="email" class="control-label">E-mail</label>
+		<input type="email" class="form-control" id="email" name="email" ngModel placeholder="Email">
+	</div>
+	
+	<div class="form-group"> <!-- Register Button -->
+		<button type="submit" class="btn btn-primary">Register</button>
+	</div>
+</form>	
+</div>
+</div>
+<div *ngIf="!showregister">
+	<app-admin></app-admin>
+</div>
+<notifier-container></notifier-container>

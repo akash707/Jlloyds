@@ -1,0 +1,30 @@
+<br/>
+<br/>
+<div class="container">
+    <h2>Companies Information</h2>    
+    <br/>
+    <br/>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Deactivate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let company of companies.companies">
+          <td>{{company.company_name}}</td>
+          <td>{{company.first_name}}</td>
+          <td>{{company.last_name}}</td>
+          <td>{{company.email}}</td>
+          <td>{{company.status ? 'Active' : 'Inactive'}}</td>
+          <a (click)="deactivateCompany(company._id)"><td style="text-decoration: underline">Deactivate</td></a>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
